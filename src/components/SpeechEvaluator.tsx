@@ -28,8 +28,8 @@ export const SpeechEvaluator: React.FC<SpeechEvaluatorProps> = ({
   return (
     <div className="w-full max-w-[600px] mt-1 space-y-2">
       <div className="flex flex-col items-center gap-2 p-3 bg-emerald-50/20 rounded-xl border border-emerald-100">
-        <div className="flex items-center gap-2 text-emerald-700 font-bold text-xs">
-          <Mic size={16} className="text-emerald-500" />
+        <div className="flex items-center gap-2 text-brand-green-dark font-extrabold text-sm">
+          <Mic size={16} className="text-brand-green" />
           <span>Nextgen English: Luyện nói cùng AI</span>
         </div>
         

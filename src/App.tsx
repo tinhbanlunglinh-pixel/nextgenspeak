@@ -350,7 +350,7 @@ export default function App() {
         <div className="mb-8 sm:mb-12 flex flex-col items-center justify-center text-center space-y-6">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col items-center">
             <BrandLogo className="w-14 h-14 sm:w-16 sm:h-16 mb-4" />
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-brand-green-dark tracking-tighter uppercase mb-2">Master speaking with Nextgen AI</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter uppercase mb-2"><span className="text-brand-red">Master speaking</span> <span className="text-brand-green-dark">with Nextgen AI</span></h2>
           </motion.div>
           
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 bg-slate-100/50 p-2 rounded-2xl border border-slate-200">
@@ -360,8 +360,8 @@ export default function App() {
               { mode: "useInput" as ContentMode, icon: "📝", label: "Văn bản" },
             ]).map(({ mode, icon, label }) => (
               <button key={mode} onClick={() => setContentMode(mode)}
-                className={`flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold transition-all text-sm sm:text-base
-                  ${contentMode === mode ? 'bg-gradient-to-r from-emerald-500 to-brand-green text-white shadow-lg' : 'text-slate-600 hover:bg-slate-200'}`}
+                className={`flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-extrabold transition-all text-sm sm:text-base
+                  ${contentMode === mode ? 'bg-gradient-to-r from-brand-teal to-brand-green text-white shadow-lg' : 'text-slate-700 hover:bg-slate-200'}`}
               >
                 {icon} {label}
               </button>
@@ -410,10 +410,10 @@ export default function App() {
               {/* Preview Header */}
               <div className="p-3 sm:p-5 border-b-4 border-emerald-50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-emerald-50/30">
                 <div className="flex flex-col">
-                  <span className="text-[10px] font-black text-emerald-600 uppercase tracking-[0.2em] mb-1">Nội dung học tập siêu hấp dẫn</span>
+                  <span className="text-[10px] font-extrabold text-brand-green uppercase tracking-[0.2em] mb-1">Nội dung học tập siêu hấp dẫn</span>
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-brand-green rounded-full flex items-center justify-center text-white shadow-sm"><ImageIcon size={16} /></div>
-                    <span className="text-xs sm:text-sm font-black text-brand-green-dark uppercase tracking-widest">Góc Học Tập Của Bé</span>
+                    <span className="text-xs sm:text-sm font-extrabold text-brand-green-dark uppercase tracking-widest">Góc Học Tập Của Bé</span>
                     {readingText && <span className="px-3 py-1 bg-emerald-200 text-emerald-900 text-[10px] font-black rounded-full shadow-sm uppercase">{level}</span>}
                   </div>
                 </div>
