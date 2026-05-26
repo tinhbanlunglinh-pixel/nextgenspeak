@@ -8,7 +8,7 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ apiKey, onOpenApiKeyModal }) => (
-  <header className="bg-gray-900 border-b-4 border-green-950 sticky top-0 z-50 shadow-lg">
+  <header className="bg-brand-green-dark border-b-4 border-brand-green-dark sticky top-0 z-50 shadow-lg">
     <div className="max-w-6xl mx-auto px-3 sm:px-4 h-16 sm:h-20 flex items-center justify-between">
       <div className="flex items-center gap-2 sm:gap-4 min-w-0">
         <BrandLogo className="w-10 h-10 sm:w-12 sm:h-12 shrink-0" />
