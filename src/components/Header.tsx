@@ -8,11 +8,11 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ apiKey, onOpenApiKeyModal }) => (
-  <header className="bg-brand-green border-b border-brand-green-dark sticky top-0 z-50 shadow-lg">
+  <header className="bg-gray-900 border-b-4 border-green-950 sticky top-0 z-50 shadow-lg">
     <div className="max-w-6xl mx-auto px-3 sm:px-4 h-16 sm:h-20 flex items-center justify-between">
       <div className="flex items-center gap-2 sm:gap-4 min-w-0">
         <BrandLogo className="w-10 h-10 sm:w-12 sm:h-12 shrink-0" />
-        <h1 className="text-lg sm:text-2xl font-black tracking-tight text-brand-red uppercase truncate drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]">Nextgen English</h1>
+        <h1 className="text-lg sm:text-2xl font-black tracking-tight text-white uppercase truncate drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">Nextgen English</h1>
       </div>
       
       <div className="flex items-center gap-2 sm:gap-4 shrink-0">
@@ -20,7 +20,7 @@ export const Header: React.FC<HeaderProps> = ({ apiKey, onOpenApiKeyModal }) => 
           onClick={onOpenApiKeyModal}
           className="flex flex-col items-end group"
         >
-          <div className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 bg-white/20 hover:bg-white/30 rounded-xl transition-all border border-white/20">
+          <div className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 bg-white/10 hover:bg-white/20 rounded-xl transition-all border border-white/20">
             <Zap size={14} className="text-brand-yellow sm:w-4 sm:h-4" />
             <span className="text-xs sm:text-sm font-extrabold text-white whitespace-nowrap">Cài đặt API Key</span>
           </div>
@@ -32,7 +32,7 @@ export const Header: React.FC<HeaderProps> = ({ apiKey, onOpenApiKeyModal }) => 
         </button>
 
         <div className="hidden md:flex items-center gap-4 text-xs font-semibold text-white/90">
-          <span className="flex items-center gap-1.5 bg-brand-green-dark/40 px-3 py-1.5 rounded-full"><CheckCircle2 size={16} className="text-brand-yellow" /> Learn English , Lead the way</span>
+          <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full"><CheckCircle2 size={16} className="text-brand-yellow" /> Learn English , Lead the way</span>
         </div>
       </div>
     </div>

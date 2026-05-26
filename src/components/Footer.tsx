@@ -13,7 +13,7 @@ export const Footer: React.FC = () => (
             </div>
           </div>
           <div>
-            <h3 className="text-2xl font-black text-brand-red uppercase tracking-tight">Nextgen English</h3>
+            <h3 className="text-2xl font-black text-white uppercase tracking-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">Nextgen English</h3>
             <p className="text-white/70 font-serif italic text-sm mt-1">"Learn English , Lead the way"</p>
           </div>
         </div>
@@ -55,7 +55,7 @@ export const Footer: React.FC = () => (
               "Learn English , Lead the way"
             </p>
             <div className="h-0.5 bg-white/10 w-full" />
-            <p className="text-base font-black text-brand-teal uppercase tracking-widest text-[13px]">
+            <p className="text-base font-black text-brand-yellow uppercase tracking-widest text-[13px]">
               HỌC TIẾNG ANH . DẪN LỐI TƯƠNG LAI.
             </p>
           </div>
@@ -64,8 +64,8 @@ export const Footer: React.FC = () => (
 
       {/* Copyright */}
       <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-2">
-        <p className="text-xs text-white/50">© 2026 Nextgen English. Một trường Anh ngữ chuyên nghiệp & hiện đại.</p>
-        <div className="flex gap-4 text-xs text-white/50">
+        <p className="text-xs text-white/70">© 2026 Nextgen English. Một trường Anh ngữ chuyên nghiệp & hiện đại.</p>
+        <div className="flex gap-4 text-xs text-white/70">
           <span className="hover:text-brand-yellow cursor-pointer transition-colors">Chính sách bảo mật</span>
           <span className="hover:text-brand-yellow cursor-pointer transition-colors">Điều khoản dịch vụ</span>
         </div>

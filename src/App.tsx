@@ -311,7 +311,7 @@ export default function App() {
 
 
   return (
-    <div className="min-h-screen bg-emerald-50/30 text-[#1A1A1A] font-sans selection:bg-brand-green/10 relative overflow-hidden">
+    <div className="min-h-screen bg-slate-50 text-[#1A1A1A] font-sans selection:bg-brand-teal/20 relative overflow-hidden">
       {/* Decorative Background Icons */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden opacity-[0.08] z-0">
         <Star className="absolute top-10 left-10 text-emerald-500" size={120} />
@@ -361,7 +361,7 @@ export default function App() {
             ]).map(({ mode, icon, label }) => (
               <button key={mode} onClick={() => setContentMode(mode)}
                 className={`flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-extrabold transition-all text-sm sm:text-base
-                  ${contentMode === mode ? 'bg-gradient-to-r from-brand-teal to-brand-green text-white shadow-lg' : 'text-slate-700 hover:bg-slate-200'}`}
+                  ${contentMode === mode ? 'bg-brand-green-dark text-white shadow-lg' : 'text-slate-700 hover:bg-slate-200'}`}
               >
                 {icon} {label}
               </button>
@@ -406,15 +406,15 @@ export default function App() {
 
           {/* Preview Panel */}
           <div className="lg:col-span-8">
-            <div className="bg-white rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl border-4 border-emerald-100 overflow-hidden min-h-[400px] sm:min-h-[600px] flex flex-col relative">
+            <div className="bg-white rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl border-4 border-brand-green-dark overflow-hidden min-h-[400px] sm:min-h-[600px] flex flex-col relative">
               {/* Preview Header */}
-              <div className="p-3 sm:p-5 border-b-4 border-emerald-50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-emerald-50/30">
+              <div className="p-3 sm:p-5 border-b-4 border-brand-green/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-brand-green/5">
                 <div className="flex flex-col">
                   <span className="text-[10px] font-extrabold text-brand-green uppercase tracking-[0.2em] mb-1">Nội dung học tập siêu hấp dẫn</span>
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-brand-green rounded-full flex items-center justify-center text-white shadow-sm"><ImageIcon size={16} /></div>
+                    <div className="w-8 h-8 bg-brand-green-dark rounded-full flex items-center justify-center text-white shadow-sm"><ImageIcon size={16} /></div>
                     <span className="text-xs sm:text-sm font-extrabold text-brand-green-dark uppercase tracking-widest">Góc Học Tập Của Bé</span>
-                    {readingText && <span className="px-3 py-1 bg-emerald-200 text-emerald-900 text-[10px] font-black rounded-full shadow-sm uppercase">{level}</span>}
+                    {readingText && <span className="px-3 py-1 bg-brand-teal text-white text-[10px] font-black rounded-full shadow-sm uppercase">{level}</span>}
                   </div>
                 </div>
                 <div className="flex items-center gap-2 flex-wrap">

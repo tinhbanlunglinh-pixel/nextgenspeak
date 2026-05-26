@@ -47,16 +47,16 @@ export const InputPanel: React.FC<InputPanelProps> = (props) => {
 
   return (
     <div className="lg:col-span-4 space-y-6">
-      <section className="bg-white p-4 sm:p-6 rounded-[2rem] shadow-xl border-4 border-emerald-100 space-y-6 relative overflow-hidden">
+      <section className="bg-white p-4 sm:p-6 rounded-[2rem] shadow-xl border-4 border-brand-green-dark space-y-6 relative overflow-hidden">
         <div className="absolute -top-10 -right-10 w-32 h-32 bg-emerald-50 rounded-full opacity-40 blur-2xl" />
         <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-emerald-50 rounded-full opacity-40 blur-2xl" />
         
         <div className="relative z-10 space-y-6">
           <div>
-            <label className="flex items-center gap-2 text-sm font-black text-brand-green mb-3 uppercase tracking-wider">
-              {contentMode === "generate" && <><Type size={18} className="text-brand-green" /> Chủ đề hoặc Từ vựng</>}
-              {contentMode === "image" && <><ImageIcon size={18} className="text-brand-green" /> Tải ảnh lên</>}
-              {contentMode === "useInput" && <><FileText size={18} className="text-brand-green" /> Văn bản bài đọc</>}
+            <label className="flex items-center gap-2 text-sm font-black text-brand-green-dark mb-3 uppercase tracking-wider">
+              {contentMode === "generate" && <><Type size={18} className="text-brand-teal" /> Chủ đề hoặc Từ vựng</>}
+              {contentMode === "image" && <><ImageIcon size={18} className="text-brand-teal" /> Tải ảnh lên</>}
+              {contentMode === "useInput" && <><FileText size={18} className="text-brand-teal" /> Văn bản bài đọc</>}
             </label>
 
             {contentMode === "image" ? (
@@ -97,14 +97,14 @@ export const InputPanel: React.FC<InputPanelProps> = (props) => {
 
           {/* Level Selector */}
           <div>
-            <label className="flex items-center gap-2 text-sm font-black text-brand-green mb-3 uppercase tracking-wider">
-              <GraduationCap size={18} className="text-emerald-500" /> Trình độ Tiếng Anh
+            <label className="flex items-center gap-2 text-sm font-black text-brand-green-dark mb-3 uppercase tracking-wider">
+              <GraduationCap size={18} className="text-brand-teal" /> Trình độ Tiếng Anh
             </label>
             <div className="grid grid-cols-4 gap-1.5 sm:gap-2">
               {LEVELS.map((lvl) => (
                 <button key={lvl} onClick={() => setLevel(lvl)}
                   className={`px-1 py-2 rounded-xl text-[10px] font-black border-2 transition-all
-                    ${level === lvl ? 'bg-brand-green border-brand-green-dark text-white shadow-[0_4px_0_#064e3b] -translate-y-1' : 'bg-white border-slate-200 text-slate-900 hover:border-emerald-300 hover:bg-emerald-50'}`}
+                    ${level === lvl ? 'bg-brand-green-dark border-brand-green-dark text-white shadow-[0_4px_0_#004d49] -translate-y-1' : 'bg-white border-slate-200 text-slate-900 hover:border-brand-teal hover:bg-brand-green/10'}`}
                 >{lvl}</button>
               ))}
             </div>
@@ -115,7 +115,7 @@ export const InputPanel: React.FC<InputPanelProps> = (props) => {
           {/* Generate Button */}
           <button onClick={onGenerate} disabled={isGenerating}
             className={`w-full py-3.5 sm:py-4 rounded-2xl font-black text-white shadow-xl transition-all flex items-center justify-center gap-2 text-base sm:text-lg
-              ${isGenerating ? 'bg-slate-300 cursor-not-allowed' : 'bg-gradient-to-r from-emerald-500 to-brand-green hover:from-emerald-600 hover:to-emerald-800 active:scale-[0.98] shadow-emerald-100'}`}
+              ${isGenerating ? 'bg-slate-300 cursor-not-allowed' : 'bg-gradient-to-r from-brand-red to-brand-red-dark hover:from-red-600 hover:to-red-800 active:scale-[0.98] shadow-red-500/30'}`}
           >
             {isGenerating ? <><RefreshCw className="animate-spin" size={24} /> Đang chuẩn bị...</> : <><Sparkles size={24} className="animate-pulse" /> Bắt đầu học ngay!</>}
           </button>
@@ -149,7 +149,7 @@ export const InputPanel: React.FC<InputPanelProps> = (props) => {
 const ImageUploadArea: React.FC<any> = ({ imagePreview, isDragging, imageInputRef, handleImageUpload, handleDragOver, handleDragLeave, handleDrop }) => (
   <div onClick={() => imageInputRef.current?.click()} onDragOver={handleDragOver} onDragLeave={handleDragLeave} onDrop={handleDrop}
     className={`relative w-full aspect-video rounded-2xl border-4 border-dashed transition-all flex flex-col items-center justify-center gap-3 cursor-pointer overflow-hidden
-      ${isDragging ? 'border-brand-green bg-emerald-50/50' : 'border-emerald-100 bg-emerald-50/30 hover:border-emerald-300 hover:bg-emerald-50'}`}
+      ${isDragging ? 'border-brand-green bg-brand-green/20' : 'border-brand-green/30 bg-slate-50 hover:border-brand-teal hover:bg-brand-green/10'}`}
   >
     {imagePreview ? (
       <>
@@ -175,8 +175,8 @@ const TextInputArea: React.FC<any> = ({ topic, setTopic, contentMode, isDragging
   <div className={`relative transition-all duration-200 ${isDragging ? 'scale-[1.02]' : ''}`} onDragOver={handleDragOver} onDragLeave={handleDragLeave} onDrop={handleDrop}>
     <textarea value={topic} onChange={(e) => setTopic(e.target.value)} onPaste={handlePaste}
       placeholder={contentMode === "generate" ? "Ví dụ: Công viên, Bãi biển, Các bạn nhỏ đang chơi đùa..." : "Dán văn bản tiếng Anh của bạn vào đây, hoặc kéo thả file PDF, DOCX, TXT, Ảnh vào đây..."}
-      className={`w-full h-36 sm:h-40 p-4 bg-emerald-50/30 border-2 rounded-2xl focus:ring-4 focus:ring-brand-green/20 focus:border-brand-green transition-all resize-none text-slate-900 placeholder:text-slate-400 font-semibold text-sm sm:text-base
-        ${isDragging ? 'border-brand-green bg-emerald-50' : 'border-slate-100'}`}
+      className={`w-full h-36 sm:h-40 p-4 bg-slate-50 border-2 rounded-2xl focus:ring-4 focus:ring-brand-teal/20 focus:border-brand-teal transition-all resize-none text-slate-900 placeholder:text-slate-400 font-semibold text-sm sm:text-base
+        ${isDragging ? 'border-brand-teal bg-brand-green/10' : 'border-slate-200'}`}
     />
     {isProcessingFile && (
       <div className="absolute inset-0 bg-white/60 backdrop-blur-[1px] rounded-2xl flex items-center justify-center gap-2 text-emerald-800 font-bold animate-pulse">
