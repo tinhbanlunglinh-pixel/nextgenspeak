@@ -12,7 +12,7 @@ export const Header: React.FC<HeaderProps> = ({ apiKey, onOpenApiKeyModal }) => 
     <div className="max-w-6xl mx-auto px-3 sm:px-4 h-16 sm:h-20 flex items-center justify-between">
       <div className="flex items-center gap-2 sm:gap-4 min-w-0">
         <BrandLogo className="w-10 h-10 sm:w-12 sm:h-12 shrink-0" />
-        <h1 className="text-lg sm:text-2xl font-black tracking-tight text-brand-teal uppercase truncate drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]">Nextgen English</h1>
+        <h1 className="text-lg sm:text-2xl font-black tracking-tight text-brand-red uppercase truncate drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]">Nextgen English</h1>
       </div>
       
       <div className="flex items-center gap-2 sm:gap-4 shrink-0">
