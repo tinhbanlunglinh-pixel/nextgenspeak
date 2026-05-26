@@ -1,0 +1,8 @@
+{
+  "name": "Nextgen English - Speaking Practice",
+  "description": "Ứng dụng luyện nói Tiếng Anh - Trung Tâm Ngoại Ngữ Nextgen Uông Bí. Learn English, Lead the way.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": []
+}
