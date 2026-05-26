@@ -13,7 +13,7 @@ export const Footer: React.FC = () => (
             </div>
           </div>
           <div>
-            <h3 className="text-2xl font-black text-brand-red uppercase tracking-tight">Nextgen English</h3>
+            <h3 className="text-2xl font-black text-brand-teal uppercase tracking-tight">Nextgen English</h3>
             <p className="text-white/70 font-serif italic text-sm mt-1">"Learn English , Lead the way"</p>
           </div>
         </div>
