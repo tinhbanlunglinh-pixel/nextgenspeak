@@ -53,11 +53,11 @@ export const PosterPreview: React.FC<PosterPreviewProps> = ({
     >
 
       {/* Text Section */}
-      <div className="flex-1 p-3" style={{ backgroundColor: '#ffffff', border: '3px solid #00a84d', borderRadius: '16px', boxShadow: '0 4px 0 #0d4023' }}>
+      <div className="flex-1 p-3" style={{ backgroundColor: '#ffffff', border: '3px solid #0d7b6e', borderRadius: '16px', boxShadow: '0 4px 0 #0a3d3a' }}>
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
-            <FileText size={18} style={{ color: '#00a84d' }} />
-            <h2 className="text-base font-black" style={{ color: '#064e3b', margin: 0 }}>Nextgen English</h2>
+            <FileText size={18} style={{ color: '#0d7b6e' }} />
+            <h2 className="text-base font-black" style={{ color: '#0a3d3a', margin: 0 }}>Nextgen English</h2>
           </div>
           <div className="flex items-center gap-2" data-html2canvas-ignore>
             <button
@@ -139,7 +139,7 @@ export const PosterPreview: React.FC<PosterPreviewProps> = ({
       {/* Footer */}
       <div className="flex justify-between items-center pt-2" style={{ borderTop: '1px solid #f3f4f6' }}>
         <span className="text-[10px] font-black uppercase tracking-widest" style={{ color: '#9ca3af' }}>NEXTGEN ENGLISH</span>
-        <span className="text-[10px] font-black" style={{ color: '#00a84d' }}>Level: {level}</span>
+        <span className="text-[10px] font-black" style={{ color: '#0d7b6e' }}>Level: {level}</span>
       </div>
     </div>
   );

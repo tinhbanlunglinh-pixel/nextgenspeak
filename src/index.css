@@ -8,9 +8,11 @@
   --font-comic: "Comic Sans MS", "Chalkboard SE", "cursive";
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  --color-brand-green: #00a84d;
-  --color-brand-green-dark: #0d4023;
-  --color-brand-yellow: #fec20a;
+  --color-brand-green: #0d7b6e;
+  --color-brand-green-dark: #0a3d3a;
+  --color-brand-yellow: #f0c040;
+  --color-brand-teal: #14a89c;
+  --color-brand-accent: #e85d33;
 }
 
 @layer base {

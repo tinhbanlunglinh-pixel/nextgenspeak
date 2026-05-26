@@ -30,7 +30,7 @@ export const SpeechEvaluator: React.FC<SpeechEvaluatorProps> = ({
       <div className="flex flex-col items-center gap-2 p-3 bg-emerald-50/20 rounded-xl border border-emerald-100">
         <div className="flex items-center gap-2 text-emerald-700 font-bold text-xs">
           <Mic size={16} className="text-emerald-500" />
-          <span>Ms Thao: Luyện nói cùng cô giáo</span>
+          <span>Nextgen English: Luyện nói cùng AI</span>
         </div>
         
         {!evaluation && !isEvaluating && !isRecording && (
@@ -64,7 +64,7 @@ export const SpeechEvaluator: React.FC<SpeechEvaluatorProps> = ({
           <div className="flex flex-col items-center gap-3 py-4 animate-pulse">
             <RefreshCw className="animate-spin text-brand-green" size={32} />
             <div className="text-center">
-              <p className="text-sm font-black text-brand-green">Cô Thảo đang nghe và chấm điểm cho con nhé...</p>
+              <p className="text-sm font-black text-brand-green">Nextgen AI đang nghe và chấm điểm cho bạn nhé...</p>
               <p className="text-[10px] text-slate-400 font-medium">Bé chờ cô một chút xíu thôi!</p>
             </div>
           </div>

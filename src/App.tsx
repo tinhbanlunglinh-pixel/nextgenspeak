@@ -61,7 +61,7 @@ export default function App() {
   // UI state
   const [isDownloading, setIsDownloading] = useState(false);
   const [studentName, setStudentName] = useState('');
-  const [teacherName, setTeacherName] = useState('Ms Thao');
+  const [teacherName, setTeacherName] = useState('Nextgen English');
   const [showCertificate, setShowCertificate] = useState(false);
   const [showHistory, setShowHistory] = useState(false);
   const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
@@ -288,7 +288,7 @@ export default function App() {
       const dataUrl = canvas.toDataURL('image/png', 1.0);
       const link = document.createElement('a');
       link.style.display = 'none'; link.href = dataUrl;
-      link.download = `Ms-Thao-Poster-${Date.now()}.png`;
+      link.download = `Nextgen-English-Poster-${Date.now()}.png`;
       document.body.appendChild(link); link.click();
       setTimeout(() => { if (link.parentNode) document.body.removeChild(link); }, 500);
     } catch (err: any) {
@@ -350,7 +350,7 @@ export default function App() {
         <div className="mb-8 sm:mb-12 flex flex-col items-center justify-center text-center space-y-6">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col items-center">
             <BrandLogo className="w-14 h-14 sm:w-16 sm:h-16 mb-4" />
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-brand-green-dark tracking-tighter uppercase mb-2">Master speaking with Ms Thao AI</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-brand-green-dark tracking-tighter uppercase mb-2">Master speaking with Nextgen AI</h2>
           </motion.div>
           
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 bg-slate-100/50 p-2 rounded-2xl border border-slate-200">
